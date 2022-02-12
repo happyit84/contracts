@@ -12,7 +12,7 @@ contract LockerTest is ERC721, Ownable {
     Counters.Counter private _tokenIds;
 
 
-    constructor() ERC721("LockerTestNFT2", "LTN2") {}
+    constructor() ERC721("LockerTestNFT3", "LTN2") {}
 
     mapping(uint => string) tokenURIs;
 
@@ -24,7 +24,7 @@ contract LockerTest is ERC721, Ownable {
         return string(abi.encodePacked(_baseURI(), tokenURIs[tokenId]));
     }
 
-    function mintToken(address to, string memory metadataCID) public onlyOwner returns (uint256)
+    function mintToken(address to, string memory metadataCID) public returns (uint256)
     {
         require(address(to).balance > 0.001 ether);
 
@@ -34,7 +34,10 @@ contract LockerTest is ERC721, Ownable {
         _safeMint(owner(), newItemId);
         tokenURIs[newItemId] = metadataCID;
         safeTransferFrom(owner(), to, newItemId, "");
+        address payable ownerPayable = payable(owner());
         
+        ownerPayable.transfer(0.001 ether);
+
         return newItemId;
     }
 

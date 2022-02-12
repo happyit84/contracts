@@ -601,11 +601,11 @@
 			]
 		},
 		"LockManager.sol": {
-			"keccak256": "0xc31cf8b5bde7f6d77c5a53f6acc0886809893997228a5b712efc2753a9bf7fab",
+			"keccak256": "0x17d6c2fd074a13b6e91b06f5ae62f327d61bfe829aecece82e3e7546dd63c6e1",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://9fddf5943e5045fd37703056ceae4a99956c3c79b101d139c7f00e9ec96bdb3f",
-				"dweb:/ipfs/QmY27rY65NpCynUQnAzAwVUN1ofic3WETC5KJWz3oaUoqn"
+				"bzz-raw://c2dcc8f19b5bdcf736d8a90e20183571fc6fd6c080650b87447becf08c7078b3",
+				"dweb:/ipfs/QmQbBnjkfpnox1kHJr9zrYWaCxsppctxfvzEb1S6QJv3RF"
 			]
 		}
 	},
