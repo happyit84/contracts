@@ -164,6 +164,25 @@
 				"inputs": [
 					{
 						"internalType": "address",
+						"name": "wallet",
+						"type": "address"
+					}
+				],
+				"name": "getEthBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
 						"name": "owner",
 						"type": "address"
 					},
@@ -188,7 +207,7 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "owner",
+						"name": "to",
 						"type": "address"
 					},
 					{
@@ -582,11 +601,11 @@
 			]
 		},
 		"LockManager.sol": {
-			"keccak256": "0xf7b71c2bf162f247708f6caf02176e08e8f245f647c627090c9b06b3b377d8ff",
+			"keccak256": "0xc31cf8b5bde7f6d77c5a53f6acc0886809893997228a5b712efc2753a9bf7fab",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://1b64d67b03d63f83b83f1731d0648b0752e9e2bf725cb7ab72047dbc09aff081",
-				"dweb:/ipfs/Qme4g6YcuEJGjo4mM4yfgGgmDmxDu5ZehSrwWb5Pwwid9J"
+				"bzz-raw://9fddf5943e5045fd37703056ceae4a99956c3c79b101d139c7f00e9ec96bdb3f",
+				"dweb:/ipfs/QmY27rY65NpCynUQnAzAwVUN1ofic3WETC5KJWz3oaUoqn"
 			]
 		}
 	},
