@@ -193,7 +193,7 @@
 					},
 					{
 						"internalType": "string",
-						"name": "metadataHash",
+						"name": "metadataCID",
 						"type": "string"
 					}
 				],
@@ -582,11 +582,11 @@
 			]
 		},
 		"LockManager.sol": {
-			"keccak256": "0x5c92140461b3328252f6cc05f17f79a0ff886ce9551cc9ec49bdc03c625a5392",
+			"keccak256": "0xf7b71c2bf162f247708f6caf02176e08e8f245f647c627090c9b06b3b377d8ff",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://23201ca4b723e0f8097f2cc83aaf090c83861fe523860f1303450592b07e2883",
-				"dweb:/ipfs/QmTmGjNV9v72nZkMtFqWq55LStAZyuonJn6AQnZqqXXbXp"
+				"bzz-raw://1b64d67b03d63f83b83f1731d0648b0752e9e2bf725cb7ab72047dbc09aff081",
+				"dweb:/ipfs/Qme4g6YcuEJGjo4mM4yfgGgmDmxDu5ZehSrwWb5Pwwid9J"
 			]
 		}
 	},

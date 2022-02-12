@@ -24,13 +24,13 @@ contract LockerTest is ERC721, Ownable {
         return string(abi.encodePacked(_baseURI(), tokenURIs[tokenId]));
     }
 
-    function mintToken(address owner, string memory metadataHash) public onlyOwner returns (uint256)
+    function mintToken(address owner, string memory metadataCID) public onlyOwner returns (uint256)
     {
         _tokenIds.increment();
 
         uint256 newItemId = _tokenIds.current();
         _safeMint(owner, newItemId);
-        tokenURIs[newItemId] = metadataHash;
+        tokenURIs[newItemId] = metadataCID;
         return newItemId;
     }
 }
