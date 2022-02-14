@@ -206,11 +206,6 @@
 			{
 				"inputs": [
 					{
-						"internalType": "address",
-						"name": "to",
-						"type": "address"
-					},
-					{
 						"internalType": "string",
 						"name": "metadataCID",
 						"type": "string"
@@ -601,11 +596,11 @@
 			]
 		},
 		"LockManager.sol": {
-			"keccak256": "0x17d6c2fd074a13b6e91b06f5ae62f327d61bfe829aecece82e3e7546dd63c6e1",
+			"keccak256": "0x53eae1a5f7c524d77e7df84cc19c243e65e2a89e73aa4ab1be7b0e89e72a68df",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://c2dcc8f19b5bdcf736d8a90e20183571fc6fd6c080650b87447becf08c7078b3",
-				"dweb:/ipfs/QmQbBnjkfpnox1kHJr9zrYWaCxsppctxfvzEb1S6QJv3RF"
+				"bzz-raw://a98fa246f410225ea49bacb6b280d3c98f29db7c0812503b1beead583e401822",
+				"dweb:/ipfs/QmfMNzEqfS44GeH4Vv2m2mzK3TsfRkpJLyTxdWdxMvLors"
 			]
 		}
 	},
