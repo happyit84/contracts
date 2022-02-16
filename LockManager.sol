@@ -12,7 +12,7 @@ contract LockerTest is ERC721, Ownable {
     Counters.Counter private _tokenIds;
 
 
-    constructor() ERC721("LockerTestNFT4", "LTN2") {}
+    constructor() ERC721("LockerTestNFT5", "LTN2") {}
 
     mapping(uint => string) tokenURIs;
 
@@ -24,7 +24,7 @@ contract LockerTest is ERC721, Ownable {
         return string(abi.encodePacked(_baseURI(), tokenURIs[tokenId]));
     }
 
-    function mintToken(string memory metadataCID) public returns (uint256)
+    function mintToken(string memory metadataCID) public payable returns (uint256)
     {
         require(address(msg.sender).balance > 0.001 ether);
 
@@ -33,10 +33,9 @@ contract LockerTest is ERC721, Ownable {
         uint256 newItemId = _tokenIds.current();
         _safeMint(msg.sender, newItemId);
         tokenURIs[newItemId] = metadataCID;
-        //safeTransferFrom(owner(), to, newItemId, "");
-        //address payable ownerPayable = payable(owner());
-        
-        //ownerPayable.transfer(0.001 ether);
+        address contractAddress = address(this);
+        address payable pa = payable(contractAddress);
+        pa.transfer(0.001 ether);
 
         return newItemId;
     }
@@ -46,4 +45,14 @@ contract LockerTest is ERC721, Ownable {
     {
         return address(wallet).balance;
     }
+
+    function withdraw() public onlyOwner returns(bool sucess)
+    {
+        require(msg.sender == owner());
+        payable(owner()).transfer(address(this).balance);
+        return true;
+    }
+
+    receive() external payable {}
+    fallback() external payable {}
 }
