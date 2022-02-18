@@ -109,6 +109,19 @@
 				"type": "fallback"
 			},
 			{
+				"inputs": [],
+				"name": "GetContractBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "address",
@@ -173,6 +186,32 @@
 					}
 				],
 				"name": "getEthBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getSenderAddress",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getSenderEthBalance",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -617,11 +656,11 @@
 			]
 		},
 		"LockManager.sol": {
-			"keccak256": "0x9955f4114a5c58293bfa0a9440e8f7022c505af199ccfbed2e5af001728e62b8",
+			"keccak256": "0x5af5967018b113f93740cc9c11cf21afaf269530eafa171a5f4693c00da224f3",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://40dee36a59654727e1bc91b25c9a5f57f758d247845564be884b81943d197850",
-				"dweb:/ipfs/Qmd9wjWzuqGr24gsCjCerBSksmMdjuKmdJWkj9es8umi3K"
+				"bzz-raw://9cbf216db08956089c7a44c41c1776de2e86f03c9038df50623d1d01054411b2",
+				"dweb:/ipfs/QmNfaP9jrDTyGVwhPcSvctFT375YAPmfV3ZnDM9iW7EVRP"
 			]
 		}
 	},
