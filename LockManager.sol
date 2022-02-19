@@ -12,7 +12,7 @@ contract LockerTest is ERC721, Ownable {
     Counters.Counter private _tokenIds;
 
 
-    constructor() ERC721("LockerTestNFT6", "LTN2") {}
+    constructor() ERC721("LockerTestNFT6", "LTN2") payable {}
 
     mapping(uint => string) tokenURIs;
 
@@ -24,44 +24,46 @@ contract LockerTest is ERC721, Ownable {
         return string(abi.encodePacked(_baseURI(), tokenURIs[tokenId]));
     }
 
-    function mintToken(string memory metadataCID) public payable returns (uint256)
+    function mintToken(string memory metadataCID) external payable returns (uint256)
     {
-        require(address(msg.sender).balance > 0.00001 ether);
+        require(msg.value == 123);
 
         _tokenIds.increment();
 
         uint256 newItemId = _tokenIds.current();
         _safeMint(msg.sender, newItemId);
         tokenURIs[newItemId] = metadataCID;
-        address contractAddress = address(this);
-        address payable pa = payable(contractAddress);
-        pa.transfer(0.00001 ether);
 
         return newItemId;
     }
 
-    function GetContractBalance() public view returns (uint256)
+    function getContractBalance() external view returns (uint256)
     {
         return address(this).balance;
     }
 
     // get ETH balance of the wallet
-    function getEthBalance(address wallet) public view returns (uint256)
+    function getEthBalance(address wallet) external view returns (uint256)
     {
         return address(wallet).balance;
     }
 
-    function getSenderAddress() public view returns (address)
+    function getSenderAddress() external view returns (address)
     {
         return msg.sender;
     }
 
-    function getSenderEthBalance() public view returns (uint256)
+    function getSenderEthBalance() external view returns (uint256)
     {
         return msg.sender.balance;
     }
 
-    function withdraw() public onlyOwner returns(bool sucess)
+    function sendToContract(uint256 numOfEther) external payable
+    {
+        //payable(this).call{value:numOfEther, gas:1000}("");
+    }
+
+    function withdraw() external onlyOwner returns(bool sucess)
     {
         require(msg.sender == owner());
         payable(owner()).transfer(address(this).balance);

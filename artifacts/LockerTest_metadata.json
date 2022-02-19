@@ -7,7 +7,7 @@
 		"abi": [
 			{
 				"inputs": [],
-				"stateMutability": "nonpayable",
+				"stateMutability": "payable",
 				"type": "constructor"
 			},
 			{
@@ -109,19 +109,6 @@
 				"type": "fallback"
 			},
 			{
-				"inputs": [],
-				"name": "GetContractBalance",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
 				"inputs": [
 					{
 						"internalType": "address",
@@ -172,6 +159,19 @@
 						"internalType": "address",
 						"name": "",
 						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getContractBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -366,6 +366,19 @@
 				"name": "safeTransferFrom",
 				"outputs": [],
 				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "numOfEther",
+						"type": "uint256"
+					}
+				],
+				"name": "sendToContract",
+				"outputs": [],
+				"stateMutability": "payable",
 				"type": "function"
 			},
 			{
@@ -656,11 +669,11 @@
 			]
 		},
 		"LockManager.sol": {
-			"keccak256": "0x5af5967018b113f93740cc9c11cf21afaf269530eafa171a5f4693c00da224f3",
+			"keccak256": "0x0f7036d6aa356ceb4f374a4efd718d8ee86104c06a503d867c1eba5401c1c9a0",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://9cbf216db08956089c7a44c41c1776de2e86f03c9038df50623d1d01054411b2",
-				"dweb:/ipfs/QmNfaP9jrDTyGVwhPcSvctFT375YAPmfV3ZnDM9iW7EVRP"
+				"bzz-raw://f338bf721f6e830cccd76af9243520bf500942c9aa2729b4c3d73b63244ca7ca",
+				"dweb:/ipfs/QmaHxEpttmusJY9m4XpYivGa2rTimzK4SMrW4AmgW7xcKV"
 			]
 		}
 	},
